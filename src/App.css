@@ -1,0 +1,13 @@
+.spacex-bg {
+  background: url('./images/spacex-bg.jpg') no-repeat center center fixed;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.685);
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.icon {
+  margin-right: 1em;
+}
