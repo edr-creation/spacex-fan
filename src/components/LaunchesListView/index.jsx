@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactLoading from 'react-loading';
 import Axios from 'axios';
 import LaunchListView from '../LaunchListView';
 
@@ -18,6 +19,13 @@ class LaunchesListView extends Component {
   }
 
   render() {
+    if (!this.state.launchesList) {
+      return (
+        <div className="react-loader">
+          <ReactLoading type="spin" color="#222222" />
+        </div>
+      );
+    }
     return (
       <section className="section">
         <div className="container has-text-centered">

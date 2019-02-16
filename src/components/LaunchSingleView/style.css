@@ -1,0 +1,18 @@
+.mission-name {
+  text-align: center;
+}
+
+.mission-details {
+  text-align: center;
+}
+
+.mission-launch {
+  text-align: center;
+  font-size: 23px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.mission-launch__success {
+  color: #44c844;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactLoading from 'react-loading';
 import Axios from 'axios';
+import './style.css';
 
 class LaunchSingleView extends Component {
   state = { flightInfo: [] };
@@ -13,12 +14,30 @@ class LaunchSingleView extends Component {
   }
 
   render() {
-    if (!this.state.flightInfo) {
-      return <ReactLoading type="spinningBubbles" color="#222222" />;
+    if (!this.state.flightInfo.mission_name) {
+      return (
+        <div className="react-loader">
+          <ReactLoading type="spin" color="#222222" />
+        </div>
+      );
     } else {
       return (
-        <div className="container">
-          <h1 className="title">{this.state.flightInfo.mission_name}</h1>
+        <div className="mission">
+          <div className="container">
+            <h1 className="title is-1 mission-name">
+              {this.state.flightInfo.mission_name}
+            </h1>
+            <p className="subtitle mission-details">
+              {this.state.flightInfo.details}
+            </p>
+            {this.state.flightInfo.launch_success ? (
+              <p className="mission-launch mission-launch__success">
+                Launch Success
+              </p>
+            ) : (
+              <p className="mission-launch">Not Successs</p>
+            )}
+          </div>
         </div>
       );
     }
