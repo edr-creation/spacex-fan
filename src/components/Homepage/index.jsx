@@ -39,7 +39,7 @@ class Homepage extends Component {
               <span className="icon">
                 <a href={this.state.companyWebsite}>
                   <i
-                    class="fa fa-space-shuttle fa-lg fa-2x"
+                    className="fa fa-space-shuttle fa-lg fa-2x"
                     aria-hidden="true"
                   />
                 </a>
