@@ -35,8 +35,12 @@ class LaunchSingleView extends Component {
                 Launch Success
               </p>
             ) : (
-              <p className="mission-launch">Not Successs</p>
+              <p className="mission-launch">Not Success</p>
             )}
+            <p className="mission-site title is-2">Launch site</p>
+            <p className="mission-site-name">
+              {this.state.flightInfo.launch_site.site_name_long}
+            </p>
           </div>
         </div>
       );
